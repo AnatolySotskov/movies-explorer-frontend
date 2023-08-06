@@ -1,6 +1,7 @@
 import "../Portfolio/Portfolio.css";
 import strelka from "../../../images/strelka.png";
 
+
 function Portfolio() {
   return (
     <section className="portfolio">
