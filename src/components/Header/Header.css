@@ -1,0 +1,142 @@
+.header {
+    background-color: #073042;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__authenticated {
+    background-color: #202020;
+}
+
+.header__logo {
+    width: 38px;
+    margin: 18px 0 18px 70px;
+}
+
+@media screen and (max-width: 768px) {
+    .header__logo {
+        margin: 18px 0 18px 30px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header__logo {
+        margin: 18px 0 18px 14px;
+    }
+}
+
+.header__info {
+    display: flex;
+    gap: 30px;
+    margin: 0px 75px 5px 0;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 1215px) {
+    .header__info {
+        margin: 0px 29px 5px 0;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .header__info {
+        margin: 21px 14px 21px 0;
+        gap: 14px;
+    }
+}
+
+.header__link {
+    color: #fff;
+    height: 16px;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 320px) {
+    .header__link {
+        font-size: 10px;
+    }
+}
+
+.header__link:hover {
+    opacity: .8;
+}
+
+.header__link_block {
+    background-color: #3DDC84;
+    border-radius: 3px;
+    color: #000;
+    width: 76px;
+    padding: 8px 0;
+}
+
+@media screen and (max-width: 320px) {
+    .header__link_block {
+        width: 54px;
+        font-size: 10px;
+    }
+}
+
+.header__link_type_profile {
+    margin-left: 729px;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    background: #202020;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+}
+
+@media screen and (max-width: 1215px) {
+    .header__link_type_profile {
+        margin-left: 640px;
+    }
+}
+
+@media screen and (max-width: 1115px) {
+    .header__link_type_profile {
+        margin-left: 550px;
+    }
+}
+
+@media screen and (max-width: 1125px) {
+    .header__link_type_profile {
+        margin-left: 450px;
+    }
+}
+
+@media screen and (max-width: 927px) {
+    .header__link_type_profile {
+        margin-left: 150px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header__link_type_profile {
+        margin-left: 0px;
+    }
+}
+
+.header__user {
+    width: 26px;
+    height: 26px;
+    background-color: #313131;
+    border-radius: 50px;
+    margin-left: 7px;
+}
+
+.header__user-icon {
+    margin: 7px;
+    width: 12px;
+    height: 12px;
+}

@@ -1,1 +1,8 @@
-# movies-explorer-frontend
+# "Movies-explorer" frontend"
+
+## Описание проекта
+Фронтенд диплома
+
+## Макет
+Макет был выбран под названием dark-1
+
