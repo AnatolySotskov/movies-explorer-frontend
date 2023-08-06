@@ -1,6 +1,5 @@
 import "../AboutMe/AboutMe.css";
 import photo from "../../../images/ava.png";
-import { Link } from "react-router-dom";
 
 function AboutMe() {
   return (
@@ -20,13 +19,13 @@ function AboutMe() {
             После того, как прошёл курс по&nbsp;веб-разработке, начал заниматься
             фриланс-заказами и&nbsp;ушёл с&nbsp;постоянной работы.
           </p>
-          <Link
-            to="https://github.com/AnatolySotskov?tab=repositories"
+          <a
+            href="https://github.com/AnatolySotskov?tab=repositories"
             className="AboutStudent__link"
             target="_blank"
           >
             Github
-          </Link>
+          </a>
         </div>
         <img
           className="AboutStudent__img"

@@ -1,13 +1,12 @@
 import "../Portfolio/Portfolio.css";
 import strelka from "../../../images/strelka.png";
-import { Link } from "react-router-dom";
 
 function Portfolio() {
   return (
     <section className="portfolio">
       <h2 className="portfolio__title"> Портфолио</h2>
-      <Link
-        to="https://github.com/AnatolySotskov/how-to-learn.git"
+      <a
+        href="https://github.com/AnatolySotskov/how-to-learn.git"
         className="portfolio__link"
         target="_blank"
       >
@@ -19,9 +18,9 @@ function Portfolio() {
             alt="Иконка стрелки"
           ></img>
         </div>
-      </Link>
-      <Link
-        to="https://github.com/AnatolySotskov/russian-travel.git"
+      </a>
+      <a
+        href="https://github.com/AnatolySotskov/russian-travel.git"
         className="portfolio__link"
         target="_blank"
       >
@@ -33,9 +32,9 @@ function Portfolio() {
             alt="Иконка стрелки"
           ></img>
         </div>
-      </Link>
-      <Link
-        to="https://github.com/AnatolySotskov/react-mesto-api-full-gha.git"
+      </a>
+      <a
+        href="https://github.com/AnatolySotskov/react-mesto-api-full-gha.git"
         className="portfolio__link"
         target="_blank"
       >
@@ -47,7 +46,7 @@ function Portfolio() {
             alt="Иконка стрелки"
           ></img>
         </div>
-      </Link>
+      </a>
     </section>
   );
 }
