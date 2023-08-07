@@ -11,7 +11,8 @@ import { useState } from "react";
 
 
 function App() {
-  const [loggedIn, setloggedIn] = useState(true);
+  // true - авторазован / false - не авторазован
+  const [loggedIn, setloggedIn] = useState(false); 
 
   return (
     <div className="page">
