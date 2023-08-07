@@ -137,6 +137,7 @@
   font-weight: 500;
   line-height: normal;
   margin-top: 112px;
+  cursor: pointer;
 }
 
 .register__submit-button:hover {

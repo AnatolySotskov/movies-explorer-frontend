@@ -8,6 +8,8 @@ import { useState } from "react";
 function Header({ loggedIn, width }) {
   const [burgerOpened, setBurgerOpened] = useState(false);
   const location = useLocation();
+
+  const { pathname } = useLocation()
   const headerBlack = location.pathname === "/movies" || location.pathname === "/saved-movies" || location.pathname === "/profile"; 
 
   return (
@@ -18,10 +20,10 @@ function Header({ loggedIn, width }) {
 
       {!loggedIn && (
         <div className="header__info">
-          <Link className="header__link" to="/sign-up">
+          <Link className="header__link" to="/signup">
             Регистрация
           </Link>
-          <Link className="header__link header__link_block" to={"/sign-in"}>
+          <Link className="header__link header__link_block" to={"/signin"}>
             Войти
           </Link>
         </div>
@@ -30,10 +32,15 @@ function Header({ loggedIn, width }) {
       {width > 768 && loggedIn && (
         <>
           <div className="header__info">
-            <Link to="/movies" className="header__link">
+            <Link to="/movies" className={`header__link ${
+              pathname !== "/movies" ? "" : "header__link_focus"
+            }`}
+            >
               Фильмы
             </Link>
-            <Link to="/saved-movies" className="header__link">
+            <Link to="/saved-movies" className={`header__link ${
+              pathname !== "/saved-movies" ? "" : "header__link_focus"
+            }`}>
               Сохранённые фильмы
             </Link>
             <Link

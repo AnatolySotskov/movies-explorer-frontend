@@ -140,3 +140,7 @@
     width: 12px;
     height: 12px;
 }
+
+.header__link_focus {
+  border-bottom: 1px solid #fff;
+}

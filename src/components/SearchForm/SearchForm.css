@@ -2,14 +2,15 @@
     width: 1140px;
     display: flex;
     align-items: center;
-    margin: 0 70px;
+    margin: 65px 70px 0;
     border-bottom: 1px solid #424242;
-    margin-bottom: 10px;
+    padding-bottom: 70px;
 }
 
 @media screen and (max-width: 1250px) {
     .search-form {
         margin: 0 auto 0px;
+        padding-bottom: 0px;
         width: 708px;
     }
 }

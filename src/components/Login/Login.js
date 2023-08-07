@@ -22,7 +22,7 @@ function Login() {
             name="email"
             pattern="^[A-Za-zА-Яа-яЁё /s -]+$"
           />
-          <span className="login__error login__error_email"></span>
+          <span className="login__error login__error_email">Вы ввели неправильный логин или пароль</span>
         </label>
         <label className="login__label">
           Пароль

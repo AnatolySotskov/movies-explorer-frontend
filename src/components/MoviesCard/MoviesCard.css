@@ -1,7 +1,7 @@
 .movie {
     display: flex;
     flex-direction: column;
-    height: 270px;
+    /* height: 270px; */
     overflow: hidden;
     background-color: #202020;
     color: #ffffff;

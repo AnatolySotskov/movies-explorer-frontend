@@ -46,6 +46,11 @@
     text-decoration: none;
     margin-bottom: 28px;
     z-index: 90;
+    opacity: .8;
+}
+
+.burger__link_focus{
+    border-bottom: 1px solid #fff;
 }
 
 .burger__menu {
@@ -73,6 +78,7 @@
     background-image: url(../../images/burger.png);
     border: none;
     cursor: pointer;
+    opacity: .8;
 }
 
 @media screen and (max-width: 768px) {
@@ -100,6 +106,7 @@
     height: 35px;
     right: 0px;
     top: 0px;
+    opacity: .8;
 }
 
 @media screen and (max-width: 768px) {

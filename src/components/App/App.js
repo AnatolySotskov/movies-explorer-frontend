@@ -11,7 +11,7 @@ import { useState } from "react";
 
 
 function App() {
-  const [loggedIn, setloggedIn] = useState(false);
+  const [loggedIn, setloggedIn] = useState(true);
 
   return (
     <div className="page">
@@ -20,8 +20,8 @@ function App() {
         <Route path="/movies" element={<Movies  loggedIn={loggedIn}/>} />
         <Route path="/saved-movies" element={<SavedMovies  loggedIn={loggedIn}/>} />
         <Route path="/profile" element={<Profile loggedIn={loggedIn}  />} />
-        <Route path="/sign-in" element={<Login />} />
-        <Route path="/sign-up" element={<Register />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="/signup" element={<Register />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>

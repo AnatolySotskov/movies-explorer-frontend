@@ -138,6 +138,7 @@
   font-weight: 500;
   line-height: normal;
   margin-top: 193px;
+  cursor: pointer;
 }
 
 .login__submit-button:hover {

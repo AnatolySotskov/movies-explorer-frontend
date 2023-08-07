@@ -157,3 +157,14 @@
     margin-top: 13px;
     color: #EE3465;
 }
+
+.profile__error {
+    display: block;
+    margin-top: 6px;
+    color: #EE3465;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

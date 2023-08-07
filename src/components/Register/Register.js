@@ -31,7 +31,7 @@ function Register() {
             maxLength="30"
             required
           />
-          <span className="register__error"></span>
+          <span className="register__error">Пользователь с таким email уже существует.</span>
         </label>
         <label className="register__label">
           Пароль
