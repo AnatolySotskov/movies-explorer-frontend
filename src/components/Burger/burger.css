@@ -75,9 +75,12 @@
     align-items: center;
     background-repeat: no-repeat;
     background-color: transparent;
-    background-image: url(../../images/burger.png);
+    background-image: url(../../images/icon__burger.svg);
     border: none;
     cursor: pointer;
+}
+
+.burger__button:hover {
     opacity: .8;
 }
 
@@ -98,7 +101,7 @@
 }
 
 .burger__button_close {
-    background-image: url(../../images/close.png);
+    background-image: url(../../images/icon_close.svg);
     background-size: contain;
     background-position: center;
     position: absolute;

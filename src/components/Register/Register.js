@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Register() {
   return (
     <section className="register">
-      <Link to="/" className="register__logo"><img src={logo} alt=""></img></Link>
+      <Link to="/" className="register__logo"><img src={logo} alt="Логотип"></img></Link>
       <h2 className="register__title">Добро пожаловать!</h2>
       <form className="register__form">
         <label className="register__label">

@@ -26,11 +26,11 @@ function Movies({ loggedIn }) {
   return (
     <>
       <Header loggedIn={loggedIn} width={dataLayout.w} />
-      <section className="movies">
+      <main className="movies">
         <SearchForm />
         <MoviesCardList />
         <Footer />
-      </section>
+      </main>
     </>
   );
 }

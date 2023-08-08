@@ -37,8 +37,8 @@ function Main({loggedIn}) {
         <Techs />
         <AboutMe />
         <Portfolio />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }

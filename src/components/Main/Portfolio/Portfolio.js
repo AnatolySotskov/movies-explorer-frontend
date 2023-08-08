@@ -1,5 +1,5 @@
 import "../Portfolio/Portfolio.css";
-import strelka from "../../../images/strelka.png";
+import strelka from "../../../images/icon_strelka.svg";
 
 
 function Portfolio() {

@@ -109,10 +109,14 @@
     color: #fff;
     border: none;
     background-color: transparent;
-    border-bottom: 1px solid #424242;
+    /* border-bottom: 1px solid #ff0808; */
     text-align: end;
     padding: 18px 0;
     outline: none;
+}
+
+.profile__input:focus {
+    border-bottom: 1px solid #4285F4;
 }
 
 @media screen and (max-width: 768px) {

@@ -12,7 +12,8 @@ import { useState } from "react";
 
 function App() {
   // true - авторазован / false - не авторазован
-  const [loggedIn, setloggedIn] = useState(false); 
+  const [loggedIn, setloggedIn] = useState(true); 
+  // При авторизации меняется хедер на черный кроме главной страницы - далее будет защищено роутером
 
   return (
     <div className="page">

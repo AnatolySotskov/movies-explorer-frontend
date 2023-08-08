@@ -8,7 +8,6 @@ import { useState } from "react";
 function Header({ loggedIn, width }) {
   const [burgerOpened, setBurgerOpened] = useState(false);
   const location = useLocation();
-
   const { pathname } = useLocation()
   const headerBlack = location.pathname === "/movies" || location.pathname === "/saved-movies" || location.pathname === "/profile"; 
 

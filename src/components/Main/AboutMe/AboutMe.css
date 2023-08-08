@@ -52,7 +52,27 @@
 
 @media screen and (max-width: 750px) {
     .AboutStudent__name-block {
-        width: 500px;
+        width: 660px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .AboutStudent__name-block {
+        width: 600px;
+    }
+}
+
+
+
+@media screen and (max-width: 682px) {
+    .AboutStudent__name-block {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 656px) {
+    .AboutStudent__name-block {
+        width: 580px;
     }
 }
 
@@ -66,7 +86,43 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 651px) {
+    .AboutStudent__name-block {
+        width: 558px;
+    }
+}
+
+@media screen and (max-width: 626px) {
+    .AboutStudent__name-block {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .AboutStudent__name-block {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 507px) {
+    .AboutStudent__name-block {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .AboutStudent__name-block {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 405px) {
+    .AboutStudent__name-block {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 388px) {
     .AboutStudent__name-block {
         width: 292px;
     }

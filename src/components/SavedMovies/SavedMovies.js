@@ -27,11 +27,11 @@ function SavedMovies({ loggedIn }) {
   return (
     <>
       <Header loggedIn={loggedIn} width={dataLayout.w} />
-      <section className="saved-movies">
+      <main className="saved-movies">
         <SearchForm />
         <MoviesCardList />
         <Footer />
-      </section>
+      </main>
     </>
   );
 }

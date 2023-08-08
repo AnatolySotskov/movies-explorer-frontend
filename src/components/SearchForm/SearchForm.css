@@ -7,6 +7,7 @@
     padding-bottom: 70px;
 }
 
+
 @media screen and (max-width: 1250px) {
     .search-form {
         margin: 0 auto 0px;
@@ -46,6 +47,7 @@
     height: 72px;
 }
 
+
 @media screen and (max-width: 1250px) {
     .search-form__form-block {
         margin: 75px auto 110px;
@@ -74,6 +76,10 @@
     height: 72px;
     border: none;
     outline: none;
+}
+
+.search-form__input:focus {
+    outline: 1px solid #4285F4;
 }
 
 @media screen and (max-width: 1250px) {
