@@ -1,0 +1,264 @@
+.project {
+    background-color: #202020;
+    padding: 110px 70px 0 70px;
+}
+
+@media screen and (max-width: 768px) {
+    .project {
+        padding: 90px 50px 0 50px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .project {
+        padding: 66px 18px 0 18px;
+    }
+}
+
+.project__about-project {
+    margin: 0;
+    padding-bottom: 23px;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.88px;
+    border-bottom: 1px solid #DADADA;
+    width: 1140px;
+}
+
+@media screen and (max-width: 1200px) {
+    .project__about-project {
+        width: 668px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .project__about-project {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 557px) {
+    .project__about-project {
+        width: 440px;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .project__about-project {
+        width: 370px;
+    }
+}
+
+@media screen and (max-width: 411px) {
+    .project__about-project {
+        width: 260px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .project__about-project {
+        width: 260px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .project__about-project {
+        width: 284px;
+        font-size: 18px;
+        letter-spacing: -0.72px;
+        padding-bottom: 27px;
+    }
+}
+
+
+.project__block {
+    display: flex;
+    margin-top: 70px;
+    gap: 40px;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+    .project__block {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .project__block {
+        width: 254px;
+        margin-top: 61px;
+        flex-direction: column;
+        gap: 60px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .project__block {
+        width: 284px;
+    }
+}
+
+
+.project__column {
+    width: 550px;
+}
+
+@media screen and (max-width: 360px) {
+    .project__column {
+        width: 250px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .project__column {
+        width: 284px;
+    }
+}
+
+.project__title {
+    margin: 0 0 26px;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.8px;
+}
+
+@media screen and (max-width: 768px) {
+    .project__title {
+        margin: 0 0 15px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .project__title {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .project__title {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .project__title {
+        width: 284px;
+        font-size: 18px;
+        letter-spacing: -0.72px;
+    }
+}
+
+.project__text {
+    margin: 0;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 142.857% */
+}
+
+@media screen and (max-width: 360px) {
+    .project__text {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .project__text {
+        font-size: 11px;
+        line-height: 16px;
+        width: 284px;
+    }
+}
+
+.project__plan {
+    display: grid;
+    margin-top: 110px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 36px auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .project__plan {
+        margin-top: 90px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .project__plan {
+        margin-top: 60px;
+        grid-template-columns: minmax(100px, 1fr) 4fr;
+    }
+}
+
+
+.project__week {
+    margin: 0;
+    padding: 9px 0 9px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media screen and (max-width: 350px) {
+    .project__week {
+        font-size: 11px;
+    }
+}
+
+.project__week_1 {
+    background: #2BE080;
+    color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .project__week_1 {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .project__week_1 {
+        width: 100px;
+    }
+}
+
+.project__week_4 {
+    background: #303030;
+    color: #FFF;
+}
+
+.project__technology {
+    margin-bottom: 0;
+    color: #8B8B8B;
+    margin-bottom: 110px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    /* 121.429% */
+}
+
+@media screen and (max-width: 320px) {
+    .project__technology {
+        font-size: 11px;
+    }
+}
