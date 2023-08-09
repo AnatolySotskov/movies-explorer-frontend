@@ -6,7 +6,7 @@ import "../MoviesCard/MoviesCard.css"
 
 function MoviesCard({name, link, duration}) {
 
-  const { pathName} = useLocation;
+  const Location = useLocation;
 
 
   return (
@@ -17,8 +17,8 @@ function MoviesCard({name, link, duration}) {
             <img className="movie__photo" src={link} alt="Фильм" />
           </p>
           <h2 className="movie__title">{name}</h2>
-          {pathName !== "/saved-movies"
-        ? <button className="movie__button_delete" type="button"></button>
+          {Location.pathName !== "/saved-movies"
+        ? <button className="movie__button movie__button_delete" type="button"></button>
         : <button className="movie__button" type="submit"></button>}
           <p className="movie__duration">{duration}</p>
         </div>
