@@ -7,7 +7,7 @@
 
 @media screen and (max-width: 768px) {
     .movies__card-list {
-        margin: 0 auto ;
+        margin: 0 auto;
     }
 }
 
@@ -50,7 +50,7 @@
 @media screen and (max-width: 730px) {
     .movies__card-list__box {
         grid-template-columns: 339px;
-       width: 320px;
+        width: 320px;
     }
 }
 
@@ -103,4 +103,9 @@
         margin: 20px 0 161px;
         width: 240px;
     }
+}
+
+.movies__card-list-error {
+    color: #FF004C;
+    margin: 15px auto 0;
 }

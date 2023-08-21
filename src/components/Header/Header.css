@@ -57,7 +57,7 @@
     font-family: Inter;
     font-size: 12px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 16px;
     text-decoration: none;
 }
@@ -72,6 +72,12 @@
 .header__link:hover {
     opacity: .8;
 }
+
+.header__link_focus {
+    /* border-bottom: 1px solid #fff; */
+    font-weight: 500;
+  
+  }
 
 .header__link_block {
     background-color: #3DDC84;
@@ -145,6 +151,3 @@
     height: 12px;
 }
 
-.header__link_focus {
-  border-bottom: 1px solid #fff;
-}

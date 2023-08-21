@@ -1,61 +1,103 @@
 import "../Register/Register.css";
 import logo from "../../images/logo.svg";
 import { Link } from "react-router-dom";
+import { useFormWithValidation } from "../../hooks/useFormWithValidation";
+import Preloader from "../Preloader/Preloader";
 
-function Register() {
+function Register({ onRegistration, props, errorMessage, isLoading }) {
+  const { values, errors, isValid, handleChange, resetForm } =
+    useFormWithValidation();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    onRegistration(values.name, values.email, values.password);
+  }
+
+  function handleReset() {
+    resetForm();
+    props.setErrorMessage("");
+  }
+
+  console.log(errorMessage);
   return (
     <section className="register">
-      <Link to="/" className="register__logo"><img src={logo} alt="Логотип"></img></Link>
-      <h2 className="register__title">Добро пожаловать!</h2>
-      <form className="register__form">
-        <label className="register__label">
-          Имя
-          <input
-            type="text"
-            className="register__input"
-            minLength="2"
-            maxLength="30"
-            required
-            name="name"
-          />
-          <span className="register__error"></span>
-        </label>
-        <label className="register__label">
-          E-mail
-          <input
-            id="email"
-            type="email"
-            className="register__input"
-            name="email"
-            minLength="2"
-            maxLength="30"
-            required
-          />
-          <span className="register__error">Пользователь с таким email уже существует.</span>
-        </label>
-        <label className="register__label">
-          Пароль
-          <input
-            type="password"
-            className="register__input"
-            name="password"
-            minLength="4"
-            maxLength="20"
-            required
-          />
-          <span className="register__error">Что-то пошло не так...</span>
-        </label>
-
-        <button className="register__submit-button" type="submit">
-          Зарегистрироваться
-        </button>
-        <p className="register__subtitle">
-          Уже зарегистрированы?
-          <Link to="/sign-in" className="register__link">
-            Войти
+      {isLoading ? (
+        <Preloader />
+      ) : (
+        <>
+          <Link to="/" className="register__logo" onClick={handleReset}>
+            <img src={logo} alt="Логотип"></img>
           </Link>
-        </p>
-      </form>
+          <h2 className="register__title">Добро пожаловать!</h2>
+          <form className="register__form" onSubmit={handleSubmit}>
+            <label className="register__label">
+              Имя
+              <input
+                type="name"
+                className="register__input"
+                minLength="2"
+                maxLength="30"
+                required
+                name="name"
+                pattern="^[A-Za-zА-Яа-яЁё /s -]+$"
+                value={values.name || ""}
+                onChange={handleChange}
+              />
+              <span className="register__error">{errors.name || ""}</span>
+            </label>
+
+            <label className="register__label">
+              E-mail
+              <input
+                id="email"
+                type="email"
+                className="register__input"
+                name="email"
+                minLength="2"
+                maxLength="30"
+                required
+                value={values.email || ""}
+                onChange={handleChange}
+              />
+              <span className="register__error">{errors.email || ""}</span>
+            </label>
+
+            <label className="register__label">
+              Пароль
+              <input
+                type="password"
+                className="register__input"
+                name="password"
+                minLength="4"
+                maxLength="20"
+                required
+                value={values.password || ""}
+                onChange={handleChange}
+              />
+              <span className="register__error">{errors.password || ""}</span>
+            </label>
+
+            <p className="register__error-button">{errorMessage}</p>
+
+            <button
+              type="submit"
+              className={`register__submit-button ${
+                isValid ? "" : "register__submit-button-disabled"
+              }`}
+              name="submit"
+            >
+              Зарегистрироваться
+            </button>
+
+            <p className="register__subtitle">
+              Уже зарегистрированы?
+              <Link to="/signin" className="register__link">
+                Войти
+              </Link>
+            </p>
+          </form>
+        </>
+      )}
     </section>
   );
 }

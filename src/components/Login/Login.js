@@ -1,28 +1,48 @@
 import "../Login/Login.css";
 import logo from "../../images/logo.svg";
 import { Link } from "react-router-dom";
+import { useFormWithValidation } from "../../hooks/useFormWithValidation";
+import Preloader from "../Preloader/Preloader";
 
-function Login() {
+
+function Login({ onAuthorization, props, errorMessage }) {
+  const { values, errors, isValid, handleChange, resetForm } =
+    useFormWithValidation();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(values);
+    onAuthorization(values.email, values.password);
+  }
+
+  function handleReset() {
+    resetForm();
+    props.setErrorMessage("");
+  }
+
   return (
     <section className="login">
-      <Link to="/" className="login__logo">
+      <Link to="/" className="login__logo" onClick={handleReset}>
         <img src={logo} alt="Логотип"></img>
       </Link>
       <h2 className="login__title">Рады видеть!</h2>
-      <form className="login__form">
+      <form className="login__form" onSubmit={handleSubmit}>
         <label className="login__label">
           E-mail
           <input
             id="login__error_email"
-            type="text"
+            type="email"
             className="login__input"
             minLength="2"
             maxLength="30"
             required
             name="email"
-            pattern="^[A-Za-zА-Яа-яЁё /s -]+$"
+            value={values.email || ""}
+            onChange={handleChange}
           />
-          <span className="login__error login__error_email">Вы ввели неправильный логин или пароль</span>
+          <span className="login__error login__error_email">
+            {errors.email || ""}
+          </span>
         </label>
         <label className="login__label">
           Пароль
@@ -31,19 +51,30 @@ function Login() {
             type="password"
             className="login__input"
             name="password"
-            minLength="2"
+            minLength="4"
             maxLength="30"
             required
+            value={values.password || ""}
+            onChange={handleChange}
           />
-          <span className="login__error"></span>
-        </label>
+          <span className="login__error">{errors.password || ""}</span>
+        </label> 
 
-        <button className="login__submit-button" type="submit">
+        <p className="login__error-button">{errorMessage}</p>
+
+        <button
+          type="submit"
+          className={`login__submit-button ${
+            isValid ? "" : "login__submit-button-disabled"
+          }`}
+          name="submit"
+        >
           Войти
         </button>
+
         <p className="login__subtitle">
           Ещё не зарегистрированы?
-          <Link to="/sign-up" className="login__link">
+          <Link to="/signup" className="login__link">
             Регистрация
           </Link>
         </p>

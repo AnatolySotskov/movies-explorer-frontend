@@ -137,7 +137,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-top: 193px;
+  /* margin-top: 193px; */
   cursor: pointer;
 }
 
@@ -157,6 +157,12 @@
     font-size: 12px;
     margin-top: 280px;
   }
+}
+
+.login__submit-button-disabled {
+  background-color: #F8F8F8;
+  cursor: no-drop;
+  color: #C2C2C2;
 }
 
 
@@ -184,4 +190,16 @@
 
 .login__link:hover {
   opacity: .8;
+}
+
+.login__error-button {
+  margin: 193px 0 20px;
+  color: #FF004C;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }

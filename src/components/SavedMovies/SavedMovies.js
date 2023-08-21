@@ -4,14 +4,29 @@ import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { useEffect, useState } from "react";
+import { useFormWithValidation } from "../../hooks/useFormWithValidation";
 
-function SavedMovies({ loggedIn }) {
+function SavedMovies({
+  loggedIn,
+  deleteCardClick,
+  flag,
+  getSearchImputSaved,
+  SearchChangeSave,
+  cardsData,
+  savedMovies,
+  setCheckSavedMovies,
+  checkSavedMovies,
+  searchInputSave
+}) {
+  const { values, errors, isValid, handleChange, resetForm } =
+    useFormWithValidation();
+
   const [dataLayout, setData] = useState({
     w: 0,
   });
 
   useEffect(() => {
-    console.log(dataLayout.w);
+    // console.log(dataLayout.w);
     setData({
       w: window.outerWidth,
     });
@@ -24,14 +39,37 @@ function SavedMovies({ loggedIn }) {
     });
   };
 
+  useEffect(() => {
+    getSearchImputSaved();
+  }, [savedMovies]);
+
+
+
+
+  
+
+
+
   return (
     <>
       <Header loggedIn={loggedIn} width={dataLayout.w} />
       <main className="saved-movies">
-        <SearchForm />
-        <MoviesCardList />
-        <Footer />
+        <SearchForm
+          SearchChange={SearchChangeSave}
+          getSearchImput={getSearchImputSaved}
+          // required={false}
+          setCheckMovies={setCheckSavedMovies}
+          checkMovies={checkSavedMovies}
+          searchInput={searchInputSave}
+        />
+
+        <MoviesCardList
+          onDeleteClick={deleteCardClick}
+          cardsData={cardsData}
+          flag={flag}
+        />
       </main>
+      <Footer />
     </>
   );
 }
