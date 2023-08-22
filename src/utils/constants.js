@@ -1,6 +1,6 @@
-// export const apiSettings = {
-//     address: "https://api.diplom.anatolysotskov.nomoredomains.xyz/",
-//   };
+export const apiSettings = {
+    address: "https://api.diplom.anatolysotskov.nomoredomains.xyz/",
+  };
 
 
 const ERROR_PASSWORD_OR_LOGIN = "Вы ввели неправильный логин или пароль";
