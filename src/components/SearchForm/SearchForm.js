@@ -35,7 +35,6 @@ function SearchForm({
           placeholder="Фильм"
           className="search-form__input"
           name="query"
-          // required
           value={searchInput || ""}
           onChange={SearchChange}
         />{" "}

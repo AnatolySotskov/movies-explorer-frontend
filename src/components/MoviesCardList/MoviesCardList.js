@@ -28,7 +28,7 @@ function MoviesCardList({
 
   useEffect(() => {
     countDisplayСard();
-  }, []);
+  }, [cardsData]);
 
   useEffect(() => {
     setTimeout(() => {
