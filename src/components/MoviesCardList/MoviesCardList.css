@@ -1,0 +1,111 @@
+.movies__card-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 70px 70px;
+}
+
+@media screen and (max-width: 768px) {
+    .movies__card-list {
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (max-width: 730px) {
+    .movies__card-list {
+        margin: 122px 10px 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .movies__card-list {
+        margin: 122px 0 0 0;
+    }
+}
+
+.movies__card-list__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 36px 0 40px;
+    justify-content: center;
+    justify-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .movies__card-list__box {
+        grid-template-columns: 339px 339px;
+        width: 768px;
+        margin-right: 10px;
+        grid-column-gap: 30px;
+        grid-row-gap: 31px;
+        padding: 80px 35px 40px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .movies__card-list__box {
+        grid-template-columns: 339px;
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .movies__card-list__box {
+        grid-template-columns: 330px;
+        grid-template-columns: 30px;
+        padding: 58px 0 37px;
+        gap: 34px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .movies__card-list__box {
+        padding: 40px 0 34px;
+        margin: 0;
+        grid-row-gap: 35px;
+    }
+}
+
+.movies__card-list__more-button {
+    width: 320px;
+    height: 36px;
+    margin: 15px 0 93px;
+    background-color: #2F2F2F;
+    border-radius: 6px;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.movies__card-list__more-button:hover {
+    opacity: .8;
+}
+
+@media screen and (max-width: 768px) {
+    .movies__card-list__more-button {
+        margin: 18px 0 161px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .movies__card-list__more-button {
+        margin: 20px 0 161px;
+        width: 240px;
+    }
+}
+
+.movies__card-list-error {
+    color: #FF004C;
+    margin: 15px auto 0;
+}

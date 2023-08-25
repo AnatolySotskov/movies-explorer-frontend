@@ -1,0 +1,9 @@
+/* NORAMALIZE */
+@import url(./vendor/normalize.css);
+
+/* FONT */
+@import url(./vendor/fonts.css);
+
+.body {
+    background: #202020;
+}
