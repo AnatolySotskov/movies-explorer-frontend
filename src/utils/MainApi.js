@@ -1,5 +1,5 @@
-// export const BASE_URL = "https://api.diplom.anatolysotskov.nomoredomains.xyz";
-export const BASE_URL = "http://localhost:3000";
+export const BASE_URL = "https://api.diplom.anatolysotskov.nomoredomains.xyz";
+// export const BASE_URL = "http://localhost:3000";
 
 const request = (url, options) => {
   const fetchAddress = `${BASE_URL}/${url}`;
