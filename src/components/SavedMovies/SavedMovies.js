@@ -16,7 +16,8 @@ function SavedMovies({
   savedMovies,
   setCheckSavedMovies,
   checkSavedMovies,
-  searchInputSave
+  searchInputSave,
+  query,
 }) {
   const { values, errors, isValid, handleChange, resetForm } =
     useFormWithValidation();
@@ -43,13 +44,6 @@ function SavedMovies({
     getSearchImputSaved();
   }, [savedMovies]);
 
-
-
-
-  
-
-
-
   return (
     <>
       <Header loggedIn={loggedIn} width={dataLayout.w} />
@@ -64,6 +58,7 @@ function SavedMovies({
         />
 
         <MoviesCardList
+          query={query}
           onDeleteClick={deleteCardClick}
           cardsData={cardsData}
           flag={flag}

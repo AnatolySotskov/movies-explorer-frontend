@@ -39,7 +39,7 @@ function Register({ onRegistration, props, errorMessage, isLoading }) {
                 maxLength="30"
                 required
                 name="name"
-                pattern="^[A-Za-zА-Яа-яЁё /s -]+$"
+                // pattern="^[A-Za-zА-Яа-яЁё /s -]+$"
                 value={values.name || ""}
                 onChange={handleChange}
               />
@@ -58,6 +58,7 @@ function Register({ onRegistration, props, errorMessage, isLoading }) {
                 required
                 value={values.email || ""}
                 onChange={handleChange}
+                pattern="^[a-zA-Z0-9]([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+){1,30}\.([a-zA-Z]{2,4})$"
               />
               <span className="register__error">{errors.email || ""}</span>
             </label>

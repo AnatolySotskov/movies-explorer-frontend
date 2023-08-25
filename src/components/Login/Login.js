@@ -39,6 +39,7 @@ function Login({ onAuthorization, props, errorMessage }) {
             name="email"
             value={values.email || ""}
             onChange={handleChange}
+            pattern="^[a-zA-Z0-9]([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+){1,30}\.([a-zA-Z]{2,4})$"
           />
           <span className="login__error login__error_email">
             {errors.email || ""}

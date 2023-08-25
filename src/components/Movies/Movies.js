@@ -18,9 +18,8 @@ function Movies({
   checkMovies,
   setCheckMovies,
   searchInput,
+  query
 }) {
-
-  
   const [dataLayout, setData] = useState({
     w: 0,
   });
@@ -45,7 +44,6 @@ function Movies({
         <SearchForm
           SearchChange={SearchChange}
           getSearchImput={getSearchImput}
-          // checkBoxDuration={checkBoxDuration}
           required={true}
           checkMovies={checkMovies}
           setCheckMovies={setCheckMovies}
@@ -56,11 +54,13 @@ function Movies({
           <Preloader />
         ) : (
           <MoviesCardList
+            searchInput={searchInput}
             cardsData={cardsData}
             onLikeClick={onLikeClick}
             onDeleteClick={deleteCardClick}
             cardSaved={cardSaved}
             flag={flag}
+            query={query}
           />
         )}
       </main>

@@ -27,6 +27,8 @@ import {
   ERROR_REGISTER_USER,
   ERROR_UPDATE,
   CHECK_BOX_TIME,
+  ERROR_500,
+  EXISTS_UPDATE,
 } from "../../utils/constants";
 
 function App() {
@@ -148,8 +150,15 @@ function App() {
     Auth.patchProfile({ name, email })
       .then((data) => {
         setCurrentUser(data);
+        setErrorMessage(EXISTS_UPDATE);
       })
-      .catch((err) => console.log(ERROR_UPDATE))
+      .catch((error) => {
+        if (error === 500) {
+          setErrorMessage(USER_EMAIL_EXISTS);
+        } else {
+          setErrorMessage(ERROR_500);
+        }
+      })
       .finally(() => {
         setIsLoading(false);
       });
@@ -219,6 +228,7 @@ function App() {
   }
 
 
+  const [ query, setQuery ] = useState(false);
 
   //Поиск фильмов в мувис
   function getSearchImput() {
@@ -236,6 +246,9 @@ function App() {
           .includes(searchInput.toLowerCase());
       });
     }
+    if (movSearch) {
+      setQuery(true);
+    } 
     setsavedSearch(movSearch);
   }
 
@@ -317,6 +330,7 @@ function App() {
                 getSearchImput={getSearchImput}
                 setCheckMovies={setCheckMovies}
                 checkMovies={checkMovies}
+                query={query}
               />
             }
           />
@@ -336,6 +350,7 @@ function App() {
                 setCheckSavedMovies={setCheckSavedMovies}
                 checkSavedMovies={checkSavedMovies}
                 searchInputSave={searchInputSave}
+                query={query}
               />
             }
           />
@@ -356,7 +371,7 @@ function App() {
             path="/signin"
             element={
               loggedIn ? (
-                <Navigate to="/" />
+                <Navigate to="/movies" />
               ) : (
                 <Login
                   onAuthorization={handleAuthorization}
@@ -371,7 +386,7 @@ function App() {
             path="/signup"
             element={
               loggedIn ? (
-                <Navigate to="/" />
+                <Navigate to="/movies" />
               ) : (
                 <Register
                   onRegistration={handleRegistration}

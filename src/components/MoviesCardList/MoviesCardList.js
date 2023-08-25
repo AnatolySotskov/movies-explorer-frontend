@@ -9,6 +9,8 @@ function MoviesCardList({
   onDeleteClick,
   cardSaved,
   flag,
+  searchInput,
+  query
 }) {
   const location = useLocation().pathname;
 
@@ -19,9 +21,11 @@ function MoviesCardList({
     const display = window.innerWidth;
     if (display > 1279) {
       setShownsMovies(16);
-    } else if (display > 767) {
+    } else if (display > 989) {
+      setShownsMovies(12);
+    } else if (display > 730) {
       setShownsMovies(8);
-    } else if (display < 768) {
+    } else {
       setShownsMovies(5);
     }
   }
@@ -31,9 +35,13 @@ function MoviesCardList({
   }, [cardsData]);
 
   useEffect(() => {
-    setTimeout(() => {
-      window.addEventListener("resize", countDisplayСard);
-    }, 500);
+    // setTimeout(() => {
+    //   window.addEventListener("resize", countDisplayСard);
+    // }, 500);
+    window.addEventListener("resize", countDisplayСard);
+    return () => {
+      window.removeEventListener("resize", countDisplayСard);
+    };
   });
 
   //кол-во добавление карточек при нажатии кнопки ЕЩЕ
@@ -41,18 +49,22 @@ function MoviesCardList({
     const display = window.innerWidth;
     if (display > 1279) {
       setShownsMovies(shownsMovies + 4);
-    } else if (display > 767) {
-      setShownsMovies(shownsMovies + 4);
-    } else if (display < 768) {
+    } else if (display > 989) {
+      setShownsMovies(shownsMovies + 3);
+    } else if (display > 730) {
+      setShownsMovies(shownsMovies + 2);
+    } else {
       setShownsMovies(shownsMovies + 2);
     }
   }
 
   return (
     <section className="movies__card-list">
-      {!cardsData.length && (
+
+      {!cardsData.length && query && (
         <p className="movies__card-list-error">Ничего не найдено</p>
       )}
+
       <div className="movies__card-list__box">
         {(location === "/saved-movies"
           ? cardsData

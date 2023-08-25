@@ -35,17 +35,10 @@ function MoviesCard({
     flag ? onDeleteClick({ id: movie.movieId }) : onDeleteClick(movie);
   }
 
-  // function cardCheck() {
-  //   const savedList = cardSaved.map((l) => l.movieId);
-  //   return savedList.includes(movie.id);
-  // }
-
   useEffect(
     function () {
       if (!flag) {
         const savedList = cardSaved.map((l) => l.movieId);
-        // console.log(savedList)
-        // console.log(cardSaved);
         setSaved(savedList.includes(movie.id));
       }
     },
